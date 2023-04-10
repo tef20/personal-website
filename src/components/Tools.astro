@@ -1,0 +1,151 @@
+---
+import { Image } from "@astrojs/image/components";
+
+import python_logo from "../assets/images/tools/python.png";
+import git_logo from "../assets/images/tools/git.png";
+import mongo_logo from "../assets/images/tools/mongodb_logo.png";
+import express_logo from "../assets/images/tools/express-js.webp";
+import react_logo from "../assets/images/tools/react2.png";
+import node_logo from "../assets/images/tools/node2.png";
+import jest_logo from "../assets/images/tools/jest.png";
+import firebase_logo from "../assets/images/tools/firebase.png";
+import ts_logo from "../assets/images/tools/ts_logo.png";
+import nextjs_logo from "../assets/images/tools/nextjs_logo.png";
+import astro_logo from "../assets/images/tools/astro_logo.png";
+
+const logos: {
+  file: ImageMetadata;
+  title: string;
+  alt: string;
+}[] = [
+  {
+    file: python_logo,
+    title: "Python",
+    alt: "Python Logo",
+  },
+  {
+    file: nextjs_logo,
+    title: "Next.js",
+    alt: "Next Logo",
+  },
+  {
+    file: react_logo,
+    title: "React",
+    alt: "React Logo",
+  },
+  {
+    file: node_logo,
+    title: "Node",
+    alt: "Node Logo",
+  },
+  {
+    file: jest_logo,
+    title: "Jest",
+    alt: "Jest Logo",
+  },
+  {
+    file: ts_logo,
+    title: "TypeScript",
+    alt: "TypeScript Logo",
+  },
+  {
+    file: firebase_logo,
+    title: "Firebase",
+    alt: "Firebase Logo",
+  },
+  {
+    file: mongo_logo,
+    title: "MongoDB",
+    alt: "MongoDB Logo",
+  },
+  {
+    file: astro_logo,
+    title: "Astro.js",
+    alt: "Astro.js Logo",
+  },
+  {
+    file: express_logo,
+    title: "Express.js",
+    alt: "Express.js Logo",
+  },
+  {
+    file: git_logo,
+    title: "Git",
+    alt: "Git Logo",
+  },
+];
+---
+
+<section class="logo-container">
+  {
+    logos.map((logo) => (
+      <figure>
+        <Image
+          class="tool-logo "
+          src={logo.file}
+          alt={logo.alt}
+          width={85}
+          format="webp"
+        />
+        <figcaption>{logo.title}</figcaption>
+      </figure>
+    ))
+  }
+</section>
+
+<style>
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 1.5vw;
+  }
+
+  figure {
+    /* outline: rebeccapurple solid 2px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  figcaption {
+    visibility: hidden;
+    margin: 0.3rem 0;
+    text-align: center;
+    background-color: rgba(50, 54, 59, 0.7);
+    border-radius: 6px;
+    padding: 0.2em 0.4em;
+    color: rgba(254, 254, 254);
+    user-select: none;
+  }
+
+  img {
+    height: auto;
+    width: clamp(2.5rem, 9vh, 8rem);
+  }
+
+  figure:hover img {
+    animation: bounce 1.2s ease-in-out;
+  }
+
+  figure:hover figcaption {
+    visibility: visible;
+  }
+
+  @keyframes bounce {
+    0%,
+    15%,
+    70%,
+    90% {
+      transform: translateY(0);
+    }
+    30% {
+      transform: translateY(-3.5vh);
+    }
+
+    50% {
+      transform: translateY(1vh);
+    }
+  }
+</style>
