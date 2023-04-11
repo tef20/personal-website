@@ -24,8 +24,8 @@ import Tools from "../components/Tools.astro";
 </style>
 
 <script>
-  import countapi from "countapi-js";
+  import { hit } from "countapi-js";
   if (import.meta.env.PROD) {
-    countapi.hit("acrylic", "076bc693-81c0-4f66-990d-5a8122dbac3e");
+    hit("acrylic", "076bc693-81c0-4f66-990d-5a8122dbac3e");
   }
 </script>
