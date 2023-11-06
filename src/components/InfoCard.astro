@@ -1,0 +1,132 @@
+---
+import { Image } from "astro:assets";
+import dp from "../assets/display-pic.png";
+import Link from "./Link.astro";
+---
+
+<section transition:name="info-card" class="info-card">
+  <div class="info flow text-centered">
+    <h1>
+      <span class="h1-before rock-animate">Hi, I'm</span>Chris Telford
+    </h1>
+    <div class="h2-wrapper">
+      <h2>‹‹ React • Next • TypeScript • CSS • Python ››</h2>
+    </div>
+    <p>I'm a web developer based in Vancouver, Canada</p>
+    <nav class="links">
+      <Link href="./projects">Projects</Link>
+      <Link href="./blog">Blog</Link>
+    </nav>
+  </div>
+  <Image
+    class="display-pic"
+    src={dp}
+    loading={"eager"}
+    alt="Display Picture"
+    width={4000}
+    height={6000}
+  />
+</section>
+<style>
+  .text-centered {
+    text-align: center;
+  }
+
+  h2 {
+    font-size: var(--step-0);
+    font-weight: light;
+
+    /* position: relative; */
+
+    text-wrap: balance;
+  }
+
+  .h1-before {
+    font-size: 0.28em;
+    position: absolute;
+    transform: translate(-4ch, -27%) rotate(-20deg);
+    transform-origin: left;
+
+    cursor: default;
+  }
+
+  .info:hover .h1-before {
+    animation-name: rock-animate;
+    animation-delay: 0.1s;
+    animation-duration: 0.7s;
+  }
+
+  .info-card * {
+    /* outline: dashed 2px maroon; */
+  }
+
+  .info-card {
+    padding-inline: 1.1em;
+
+    display: flex;
+
+    justify-content: space-evenly;
+    align-items: center;
+
+    flex-wrap: wrap;
+  }
+
+  .display-pic {
+    width: calc(11 * var(--step-0));
+    min-width: 130px;
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+    object-position: 0 38%;
+
+    border-radius: 50%;
+
+    transition: ease-in-out 0.1s;
+  }
+
+  .links {
+    display: flex;
+    justify-content: center;
+    gap: 1ch;
+  }
+
+  .display-pic:hover {
+    scale: 1.03;
+  }
+
+  @keyframes rock-animate {
+    0% {
+      rotate: 0deg;
+    }
+    10% {
+      rotate: 6deg;
+    }
+    20% {
+      rotate: 0deg;
+    }
+    30% {
+      rotate: -6deg;
+    }
+    40% {
+      rotate: 0deg;
+    }
+    50% {
+      rotate: 6deg;
+    }
+    60% {
+      rotate: 0deg;
+    }
+    70% {
+      rotate: -6deg;
+    }
+    80% {
+      rotate: 0deg;
+    }
+    90% {
+      rotate: 6deg;
+    }
+    100% {
+      rotate: 0deg;
+    }
+  }
+</style>

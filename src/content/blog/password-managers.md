@@ -1,0 +1,39 @@
+---
+title: "Password Managers are Great!"
+description: "Improve your online security, at your convenience"
+pubDate: "Sep 15 2023"
+heroImage: "/blog-placeholder-3.jpg"
+---
+
+Dev tip! 💡
+
+As a developer, I've recently started paying more attention to how words look on the web - typography!
+
+Good typography can make your website pop! Bad typography can be a barrier to your users... Even in a world of amazing audio and visual effects, we still consume a lot of text, but making all these tricky design decisions around text can be exhausting and confusing without a systematic approach!
+
+So here's an awesome and underrated tool that I've found helps me lay the foundations of a tidy, dynamic type system when starting new projects:
+
+⭐ Utopia! ⭐
+
+Utopia is both a powerful tool and a guiding philosophy for approaching sizing and spacing in web design.
+
+It's a simple generator that lets you set:
+
+- a consistent size ratio between types
+- the range that each type can expand and contract to
+
+...and gives you back some neat CSS variables that:
+
+- slot seamlessly into your project
+- create consistency across your typing scale
+- handle responsive sizing gracefully, without jarring breakpoints!
+
+Below is a simple example using heading tags 👇
+
+To learn more:  
+🔗 Try it for yourself - https://lnkd.in/gvYQySzU  
+🔗 Read their intro article in Smashing Magazine - https://lnkd.in/gZ33FNbh
+
+What are your favorite tips and tools for designing websites?
+
+<Image src="https://imgs.xkcd.com/comics/password_strength.png" alt="XKCD Comic on password advice that is hard for humans to follow" />
