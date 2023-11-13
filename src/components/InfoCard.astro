@@ -4,28 +4,6 @@ import dp from "../assets/display-pic-med.png";
 import Link from "./Link.astro";
 ---
 
-<section transition:name="info-card" class="info-card">
-  <div class="info flow text-centered">
-    <h1>
-      <span class="h1-before rock-animate">Hi, I'm</span>Chris Telford
-    </h1>
-    <div class="h2-wrapper">
-      <h2>‹‹ React • Next • TypeScript • CSS • Python ››</h2>
-    </div>
-    <p>I'm a web developer based in Vancouver, Canada</p>
-    <nav class="links">
-      <Link href="./projects">Projects</Link>
-      <Link href="./blog">Blog</Link>
-    </nav>
-  </div>
-  <Image
-    id="display-pic"
-    class="display-pic"
-    src={dp}
-    alt="Display Picture"
-    format="webp"
-  />
-</section>
 <style>
   .text-centered {
     text-align: center;
@@ -125,3 +103,25 @@ import Link from "./Link.astro";
     }
   }
 </style>
+<section transition:name="info-card" class="info-card">
+  <div class="info flow text-centered">
+    <h1>
+      <span class="h1-before rock-animate">Hi, I'm</span>Chris Telford
+    </h1>
+    <div class="h2-wrapper">
+      <h2>‹‹ React • Next • TypeScript • CSS • Python ››</h2>
+    </div>
+    <p>I'm a web developer based in Vancouver, Canada</p>
+    <nav class="links">
+      <Link href="./projects">Projects</Link>
+      <Link href="./blog">Blog</Link>
+    </nav>
+  </div>
+  <Image
+    id="display-pic"
+    class="display-pic"
+    src={dp}
+    alt="Display Picture"
+    format="webp"
+  />
+</section>
