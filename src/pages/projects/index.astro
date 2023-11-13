@@ -23,7 +23,7 @@ const { page } = Astro.props;
       <InfoCard />
     </aside>
     <main>
-      <Link href="/">
+      <!-- <Link href="/">
         <svg
           width="15"
           height="15"
@@ -36,22 +36,21 @@ const { page } = Astro.props;
             fill-rule="evenodd"
             clip-rule="evenodd"></path></svg
         >
-      </Link>
+      </Link> -->
       <h1>Recent projects</h1>
       <ul>
-        <ListItem
-          href="./exampleProject"
-          title={"Interactive Reader Red Egg Edutainment"}
-          imgAlt="RedEgg Educatainment logo - a red, cartoon egg with a face"
-          text="Interactive children's book using AI generated speach to text, syncronized text highlighting, and automated data pipeline"
-        />
+        {
+          Array(4).fill(
+            <ListItem
+              href="https://red-egg-edu-reader.vercel.app/"
+              title={"Interactive Reader Red Egg Edutainment"}
+              imgAlt="RedEgg Educatainment logo - a red, cartoon egg with a face"
+              text="Interactive children's book using AI generated speach to text, syncronized text highlighting, and automated data pipeline"
+            />
+          )
+        }
       </ul>
     </main>
-    <style>
-      article {
-        max-height: 75vh;
-        overflow-y: auto;
-      }
-    </style>
+    <style></style>
   </body>
 </html>

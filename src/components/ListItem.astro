@@ -4,42 +4,45 @@ import placeholderImg from "../assets/placeholder-img.png";
 const { href, title, text, imgSrc, imgAlt } = Astro.props;
 ---
 
-<a href={href}>
-  <li class="smol-card-component">
+<li class="smol-card-component">
+  <a href={href} target="_blank">
     {
       imgSrc ? (
         <Image class="img" src={placeholderImg} alt={imgAlt} />
       ) : (
         <Image class="img" src={placeholderImg} alt={imgAlt} />
       )
-    }<div>
+    }<div class="text">
       <h1>{title}</h1>
       <p>{text}</p>
     </div>
-  </li>
-</a>
+  </a>
+</li>
 
 <style>
-  a {
-    text-decoration: none;
-  }
-
   li {
     list-style: none;
+    margin-bottom: 1em;
 
-    display: flex;
-    gap: 1.1ch;
-    flex-wrap: wrap;
+    overflow: hidden;
 
-    color: black;
     border: 2px dashed black;
     border-radius: 8px;
   }
 
+  a {
+    text-decoration: none;
+
+    display: flex;
+    gap: 1.1ch;
+
+    color: black;
+  }
+
   .img {
-    width: 23%;
-    min-width: 100px;
-    aspect-ratio: 3 / 2;
+    height: 100%;
+    width: 30%;
+    min-width: 110px;
   }
 
   h1 {

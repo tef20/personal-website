@@ -68,7 +68,7 @@ body {
 
 main {
   /* outline: solid red 2px; */
-  width: clamp(320px, 50%, 860px);
+  /* width: clamp(320px, 50%, 860px); */
   margin-block: auto;
   margin-inline: auto;
   padding: 3em 1em;
@@ -84,18 +84,38 @@ aside {
   /* outline: solid blue 2px; */
   max-width: 20vw;
   margin-block: auto;
-  /* padding: 3em 2em; */
   margin-inline: min(2em, 10vw) 1em;
   padding: 3em 2em;
 }
 
-@media (max-width: 1490px) {
+ul {
+  margin-top: var(--step-4);
+  max-height: 65vh;
+  overflow-y: auto;
+  padding: 0 1em 0 0;
+}
+
+@media (max-width: 1000px) {
   body {
     flex-direction: column-reverse;
   }
+  aside {
+    max-width: initial;
+    margin-inline: auto;
+  }
 
-  main {
-    margin-block: auto;
+  aside #display-pic {
+    display: none;
+  }
+  aside + main {
+    border-inline-end: none;
+
+    padding-block-start: 1em;
+    margin-inline: 0;
+  }
+
+  ul {
+    max-height: none;
   }
 }
 
@@ -167,7 +187,8 @@ table {
 img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
+  font-style: italic;
+  /* border-radius: 8px; */
 }
 
 code {
