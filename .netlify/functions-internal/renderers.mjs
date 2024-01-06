@@ -1,4 +1,4 @@
-import { t as AstroJSX, A as AstroError, v as renderJSX, w as createVNode } from './chunks/astro_2c8dc02d.mjs';
+import { t as AstroJSX, A as AstroError, v as renderJSX, w as createVNode } from './chunks/astro_9d1b3975.mjs';
 import 'clsx';
 import 'html-escaper';
 

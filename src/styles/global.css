@@ -99,6 +99,7 @@ ul {
   body {
     flex-direction: column-reverse;
   }
+
   aside {
     max-width: initial;
     margin-inline: auto;
@@ -107,6 +108,7 @@ ul {
   aside #display-pic {
     display: none;
   }
+
   aside + main {
     border-inline-end: none;
 
