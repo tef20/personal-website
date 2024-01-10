@@ -18,6 +18,12 @@ const { page } = Astro.props;
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     <ViewTransitions />
+    <style>
+      h1 {
+        text-wrap: wrap;
+        max-width: 20ch;
+      }
+    </style>
   </head>
   <body>
     <!-- <Header title={SITE_TITLE} /> -->
@@ -25,7 +31,7 @@ const { page } = Astro.props;
       <InfoCard />
     </aside>
     <main>
-      <h1>Recent projects</h1>
+      <h1>Recent projects (work in prog...)</h1>
       <ul>
         {
           Array(4).fill(
