@@ -11,13 +11,13 @@ export default defineConfig({
   integrations: [mdx(), sitemap()],
   output: "server",
   adapter: netlify(),
-  image: {
-    // Example: Enable the Sharp-based image service with a custom config
-    service: {
-      entrypoint: "astro/assets/services/sharp",
-      config: {
-        limitInputPixels: false,
-      },
-    },
-  },
+  // image: {
+  //   // Example: Enable the Sharp-based image service with a custom config
+  //   service: {
+  //     entrypoint: "astro/assets/services/sharp",
+  //     config: {
+  //       limitInputPixels: false,
+  //     },
+  //   },
+  // },
 });
