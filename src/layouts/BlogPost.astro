@@ -24,10 +24,21 @@ const {
         width: calc(100% - 2em);
         max-width: 100%;
         margin: 0;
+        padding-top: 1rem;
+      }
+      #back-btn {
+        display: inline-block;
+
+        line-height: 0.8em;
+
+        text-decoration: none;
+        font-size: var(--step-6);
+      }
+      #back-btn:hover {
+        transform: rotate(8deg);
       }
       .hero-image {
         width: 100%;
-        /* max-width: 400px; */
       }
       .hero-image img {
         display: block;
@@ -64,6 +75,9 @@ const {
   <body>
     <!-- <Header /> -->
     <main>
+      <a id="back-btn" href="/blog" aria-label="return to blogs list page">
+        ‹‹
+      </a>
       <article>
         <div class="hero-image">
           {heroImage && <img width={600} height={600} src={heroImage} alt="" />}
