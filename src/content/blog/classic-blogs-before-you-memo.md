@@ -2,7 +2,10 @@
 title: "Encapsulation and Memoization"
 description: "Encapsulating your way out of React re-renders"
 pubDate: "Oct 3 2023"
-heroImage: "/blog-placeholder-3.jpg"
+image:
+  src: "/encapsulation.webp"
+  alt: "Cartoon of vending machine as metaphor for encapsulation"
+tags: []
 ---
 
 "Encapsulation" is a key concept in React that can help you minimize re-renders without relying on memoization!

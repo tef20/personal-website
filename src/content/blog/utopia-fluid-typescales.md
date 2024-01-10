@@ -2,7 +2,10 @@
 title: "Utopia Fluid Typing"
 description: "Bring bring dynamic type scaling to your websites"
 pubDate: "Sep 8 2023"
-heroImage: "/blog-placeholder-3.jpg"
+image:
+  src: "/typescale.webp"
+  alt: "Artful depiction of various characters in different font styles"
+tags: []
 ---
 
 ### Using Utopia to set dynamic type scales

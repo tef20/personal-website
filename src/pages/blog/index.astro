@@ -31,9 +31,9 @@ const posts = (await getCollection("blog")).sort(
           posts.map((post) => (
             <ListItem
               href={`/blog/${post.slug}`}
-              projectImg={redEggLogo}
+              projectImg={`${post.data.image.src}`}
               title={post.data.title}
-              imgAlt="RedEgg Educatainment logo - a red, cartoon egg with a face"
+              imgAlt={post.data.image.alt}
               text={post.data.description}
             />
           ))

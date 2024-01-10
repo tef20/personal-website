@@ -2,7 +2,10 @@
 title: "Password Managers are Great!"
 description: "Improve your online security, at your convenience"
 pubDate: "Sep 15 2023"
-heroImage: "/blog-placeholder-3.jpg"
+image:
+  src: "/password_manager.webp"
+  alt: "Cartoon of happy old man on beach enjoying convenient cyber security"
+tags: []
 ---
 
 Dev tip! 💡

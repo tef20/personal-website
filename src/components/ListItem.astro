@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import placeholderImg from "../assets/placeholder-img.png";
+
 const { href, title, text, projectImg, imgAlt } = Astro.props;
 ---
 
@@ -46,7 +47,7 @@ const { href, title, text, projectImg, imgAlt } = Astro.props;
   <a href={href}>
     {
       projectImg ? (
-        <Image class="img" src={projectImg} alt={imgAlt} />
+        <Image src={projectImg} width={220} height={220} alt={imgAlt} />
       ) : (
         <Image class="img" src={placeholderImg} alt={imgAlt} />
       )
