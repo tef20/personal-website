@@ -9,8 +9,9 @@ import netlify from "@astrojs/netlify";
 export default defineConfig({
   site: "https://acrylicwebdesigns.netlify.app",
   integrations: [mdx(), sitemap()],
-  output: "server",
-  adapter: netlify(),
+  // output: "server",
+  output: "static",
+  // adapter: netlify(),
   // image: {
   //   // Example: Enable the Sharp-based image service with a custom config
   //   service: {
