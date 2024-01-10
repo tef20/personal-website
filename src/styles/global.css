@@ -159,10 +159,13 @@ b {
 }
 
 a {
-  color: var(--accent);
+  color: var(--black);
 }
 a:hover {
-  color: var(--accent);
+  color: var(--black);
+}
+a:visited {
+  color: var(--black);
 }
 
 p {
