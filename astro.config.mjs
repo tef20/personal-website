@@ -2,7 +2,7 @@ import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 
-import netlify from "@astrojs/netlify/functions";
+import netlify from "@astrojs/netlify";
 // import service from "astro/assets/services/squoosh";
 
 // https://astro.build/config
