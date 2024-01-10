@@ -10,7 +10,7 @@ export default defineConfig({
   site: "https://acrylicwebdesigns.netlify.app",
   integrations: [mdx(), sitemap()],
   output: "server",
-  adapter: netlify(),
+  adapter: netlify({ cacheOnDemandPages: true }),
   // image: {
   //   // Example: Enable the Sharp-based image service with a custom config
   //   service: {
