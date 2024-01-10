@@ -2,8 +2,8 @@
 title: "Encapsulation and Memoization"
 description: "Encapsulating your way out of React re-renders"
 pubDate: "Oct 3 2023"
-image:
-  src: "/encapsulation.webp"
+cover:
+  image: "../../assets/encapsulation.webp"
   alt: "Cartoon of vending machine as metaphor for encapsulation"
 tags: []
 ---

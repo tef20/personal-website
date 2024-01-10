@@ -1,13 +1,10 @@
 ---
 import BaseHead from "../../components/BaseHead.astro";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
 import { ViewTransitions } from "astro:transitions";
 import InfoCard from "../../components/InfoCard.astro";
 import ListItem from "../../components/ListItem.astro";
-import redEggLogo from "../../assets/red_egg_logo.webp";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -20,7 +17,6 @@ const posts = (await getCollection("blog")).sort(
     <ViewTransitions />
   </head>
   <body>
-    <!-- <Header title={SITE_TITLE} /> -->
     <aside>
       <InfoCard />
     </aside>
@@ -31,9 +27,9 @@ const posts = (await getCollection("blog")).sort(
           posts.map((post) => (
             <ListItem
               href={`/blog/${post.slug}`}
-              projectImg={`${post.data.image.src}`}
+              projectImg={post.data.cover.image}
               title={post.data.title}
-              imgAlt={post.data.image.alt}
+              imgAlt={post.data.cover.alt}
               text={post.data.description}
             />
           ))

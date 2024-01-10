@@ -2,8 +2,8 @@
 title: "Utopia Fluid Typing"
 description: "Bring bring dynamic type scaling to your websites"
 pubDate: "Sep 8 2023"
-image:
-  src: "/typescale.webp"
+cover:
+  image: "../../assets/typescale.webp"
   alt: "Artful depiction of various characters in different font styles"
 tags: []
 ---

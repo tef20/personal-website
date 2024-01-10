@@ -25,12 +25,6 @@ const { href, title, text, projectImg, imgAlt } = Astro.props;
     color: black;
   }
 
-  .img {
-    height: 100%;
-    width: 30%;
-    min-width: 110px;
-  }
-
   h1 {
     font-size: var(--step-1);
     line-height: 1.5;
@@ -46,13 +40,14 @@ const { href, title, text, projectImg, imgAlt } = Astro.props;
 </style>
 <li class="smol-card-component">
   <a href={href}>
-    {
-      projectImg ? (
-        <Image src={projectImg} width={220} height={220} alt={imgAlt} />
-      ) : (
-        <Image class="img" src={placeholderImg} alt={imgAlt} />
-      )
-    }<div class="text">
+    <Image
+      src={projectImg ?? placeholderImg}
+      width={250}
+      height={250}
+      alt={imgAlt}
+    />
+
+    <div class="text">
       <h1>{title}</h1>
       <p>{text}</p>
     </div>
