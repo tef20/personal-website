@@ -2,6 +2,8 @@
 import { Image } from "astro:assets";
 import dp from "../assets/display-pic.webp";
 import Link from "./Link.astro";
+
+const disableDisplayPicLink = Astro.url.pathname === "/";
 ---
 
 <style>
@@ -117,11 +119,17 @@ import Link from "./Link.astro";
       <Link href="./blog">Blog</Link>
     </nav>
   </div>
-  <Image
-    id="display-pic"
-    class="display-pic"
-    src={dp}
-    alt="Display Picture"
-    format="webp"
-  />
+  <a
+    href="/"
+    aria-label="return to homepage"
+    style={disableDisplayPicLink ? "pointer-events: none" : ""}
+  >
+    <Image
+      id="display-pic"
+      class="display-pic"
+      src={dp}
+      alt="Display Picture"
+      format="webp"
+    />
+  </a>
 </section>
