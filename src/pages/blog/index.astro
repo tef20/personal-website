@@ -15,8 +15,16 @@ const posts = (await getCollection("blog")).sort(
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     <ViewTransitions />
+    <style>
+      .close {
+        font-size: var(--step-4);
+        padding-left: 2ch;
+        text-decoration: none;
+      }
+    </style>
   </head>
   <body>
+    <a class="close" href="/" aria-label="return home">⨯</a>
     <aside>
       <InfoCard />
     </aside>
