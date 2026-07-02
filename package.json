@@ -10,12 +10,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^2.0.3",
-    "@astrojs/netlify": "^4.1.0",
-    "@astrojs/rss": "^4.0.1",
-    "@astrojs/sitemap": "^3.0.0",
-    "@netlify/functions": "^2.4.1",
-    "astro": "^4.1.1",
-    "sharp": "^0.33.1"
+    "@astrojs/mdx": "^7.0.2",
+    "@astrojs/netlify": "^8.1.1",
+    "@astrojs/rss": "^4.0.19",
+    "@astrojs/sitemap": "^3.7.3",
+    "@netlify/functions": "^5.3.0",
+    "astro": "^7.0.6",
+    "sharp": "^0.35.3"
   }
 }

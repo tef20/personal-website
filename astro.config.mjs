@@ -11,7 +11,9 @@ export default defineConfig({
   integrations: [mdx(), sitemap()],
   // output: "server",
   output: "static",
-  adapter: netlify(),
+  adapter: netlify({
+    devFeatures: false,
+  }),
   // image: {
   //   // Example: Enable the Sharp-based image service with a custom config
   //   service: {

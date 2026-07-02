@@ -2,7 +2,7 @@
 import BaseHead from "../../components/BaseHead.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 import InfoCard from "../../components/InfoCard.astro";
 import ListItem from "../../components/ListItem.astro";
 
@@ -14,7 +14,7 @@ const posts = (await getCollection("blog")).sort(
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    <ViewTransitions />
+    <ClientRouter />
     <style>
       .close {
         font-size: var(--step-4);
@@ -34,7 +34,7 @@ const posts = (await getCollection("blog")).sort(
         {
           posts.map((post) => (
             <ListItem
-              href={`/blog/${post.slug}`}
+              href={`/blog/${post.id}`}
               projectImg={post.data.cover.image}
               title={post.data.title}
               imgAlt={post.data.cover.alt}

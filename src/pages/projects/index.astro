@@ -1,6 +1,6 @@
 ---
 import BaseHead from "../../components/BaseHead.astro";
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 import InfoCard from "../../components/InfoCard.astro";
 import ListItem from "../../components/ListItem.astro";
 
@@ -17,7 +17,7 @@ const { page } = Astro.props;
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    <ViewTransitions />
+    <ClientRouter />
     <style>
       h1 {
         text-wrap: wrap;
